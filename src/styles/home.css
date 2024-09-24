@@ -1,0 +1,36 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 88vh;
+  background-image: url("../assets/matlou3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity here */
+  z-index: 1;
+}
+
+.home-header {
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  h1,
+  h2 {
+    margin: 0;
+    position: relative;
+    z-index: 2;
+  }
+}

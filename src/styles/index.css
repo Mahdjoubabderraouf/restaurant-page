@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Lily Script One;
+  word-wrap: break-word;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: white;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #f5980c;
+}
+h3 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  background: #000;
+  color: white;
+  padding-inline: 2rem;
+  display: flex;
+  height: 12vh;
+  align-items: center;
+  justify-content: end;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+  flex: 1;
+  button {
+    border: none;
+    background-color: initial;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    word-wrap: break-word;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+  }
+  button:focus {
+    background-color: white;
+    color: #f5980c;
+  }
+}
