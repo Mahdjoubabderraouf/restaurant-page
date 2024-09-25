@@ -20,7 +20,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.7rem;
   color: #f5980c;
 }
 h3 {
@@ -35,19 +35,24 @@ h3 {
 nav {
   background: #000;
   color: white;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
   display: flex;
+  flex-wrap: wrap;
   height: 12vh;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
+  h1{
+    flex: 1;
+  }
 }
 
 .buttons {
   display: flex;
+
   align-items: center;
   justify-content: end;
-  gap: 1rem;
-  flex: 1;
+
+  flex: 2;
   button {
     border: none;
     background-color: initial;

@@ -5,7 +5,6 @@ const loadHomePage = () => {
   content.innerHTML = "";
   content.className = "";
   activeButton("Home");
-
   const divContainer = document.createElement("div");
   const divHeader = document.createElement("div");
   const h1 = document.createElement("h1");
