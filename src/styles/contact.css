@@ -1,0 +1,16 @@
+.contact {
+  background-image: url("../assets/table.png");
+  background-size: cover;
+  min-height: 88vh;
+  padding: 1rem;
+  position: relative;
+}
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.322);
+}
