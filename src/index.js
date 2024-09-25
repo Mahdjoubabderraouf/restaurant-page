@@ -13,3 +13,4 @@ homeButton.addEventListener("click", () => {
 menuButton.addEventListener("click", () => {
   loadMenuPage();
 });
+

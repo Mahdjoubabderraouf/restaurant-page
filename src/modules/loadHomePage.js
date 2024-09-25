@@ -4,14 +4,12 @@ import { activeButton, content } from "./tools";
 const loadHomePage = () => {
   content.innerHTML = "";
   content.className = "";
+  activeButton("Home");
 
   const divContainer = document.createElement("div");
   const divHeader = document.createElement("div");
   const h1 = document.createElement("h1");
   const h2 = document.createElement("h2");
-
-  const homeButton = document.getElementById("home");
-  activeButton("Home");
 
   divContainer.className = "home";
   divHeader.classList.add("home-header");

@@ -1,15 +1,15 @@
 .menu {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   background-color: #f5980c;
   position: relative;
-  height: 88vh;
-  padding: 2rem;
+  min-height: 88vh;
+  padding: 0.5rem;
 
   h1 {
     margin: 0;
+    text-align: center;
   }
 }
 
@@ -23,8 +23,8 @@
 
 .line {
   position: relative;
-  top: 25%;
-  width: 100%;
+  top: 20px;
+  flex: 1;
   max-width: 5rem;
   height: 0.2rem;
   background-color: #fff;
@@ -32,7 +32,8 @@
 }
 
 .menu-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   flex: 1;
   flex-direction: column;
   justify-content: center;
@@ -42,8 +43,32 @@
   margin-top: 1rem;
   margin-inline: auto;
   border-radius: 2rem;
-  padding: 10rem;
+  padding: 1rem;
   background-color: black;
   color: white;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.menu-item {
+  display: flex;
+  padding: 1rem;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  span {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  h3 {
+    align-self: flex-end;
+    text-wrap: wrap;
+  }
+  img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100rem;
+    object-fit: cover;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+  }
 }
