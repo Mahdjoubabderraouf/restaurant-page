@@ -41,7 +41,7 @@
   align-items: flex-start;
   width: 80%;
   max-width: 100rem;
-  margin-inline: auto;
+  margin: 3rem auto;
   gap: 2rem;
 }
 
