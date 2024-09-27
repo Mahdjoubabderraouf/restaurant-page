@@ -41,18 +41,16 @@ nav {
   height: 12vh;
   align-items: center;
   justify-content: center;
-  h1{
+  h1 {
     flex: 1;
   }
 }
 
 .buttons {
   display: flex;
-
   align-items: center;
-  justify-content: end;
-
-  flex: 2;
+  justify-content: flex-end;
+  flex: 1;
   button {
     border: none;
     background-color: initial;

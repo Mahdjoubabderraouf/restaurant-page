@@ -1,5 +1,4 @@
 .contact {
-  padding-block: 1rem;
   background-image: url("../assets/table.png");
   background-size: cover;
   min-height: 88vh;
@@ -43,6 +42,7 @@
   max-width: 100rem;
   margin: 3rem auto;
   gap: 2rem;
+  padding-bottom: 2rem;
 }
 
 .part {
