@@ -1,7 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -28,18 +27,6 @@ module.exports = {
     minimize: true,
     minimizer: [
       "...", // Default JS and CSS minimizers
-      new ImageMinimizerPlugin({
-        minimizer: {
-          implementation: ImageMinimizerPlugin.imageminMinify,
-          options: {
-            plugins: [
-              ["mozjpeg", { quality: 70 }],
-              ["pngquant", { quality: [0.6, 0.8] }],
-              ["svgo", {}],
-            ],
-          },
-        },
-      }),
     ],
   },
   devtool: "eval-source-map",
