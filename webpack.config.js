@@ -1,10 +1,15 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    main: "./src/index.js",
+  },
+
   output: {
-    filename: "main.js",
+    filename: "[name].[contenthash].bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
@@ -12,7 +17,31 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/template.html",
     }),
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css", // Separate CSS files
+    }),
   ],
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+    minimize: true,
+    minimizer: [
+      "...", // Default JS and CSS minimizers
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.imageminMinify,
+          options: {
+            plugins: [
+              ["mozjpeg", { quality: 70 }],
+              ["pngquant", { quality: [0.6, 0.8] }],
+              ["svgo", {}],
+            ],
+          },
+        },
+      }),
+    ],
+  },
   devtool: "eval-source-map",
   devServer: {
     watchFiles: ["./src/index.html"],
@@ -26,10 +55,10 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset/resource",
       },
     ],

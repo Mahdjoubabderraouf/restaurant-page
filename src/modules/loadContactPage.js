@@ -36,12 +36,16 @@ const loadContactPage = () => {
 
   const facebook = document.createElement("img");
   facebook.src = facebookIcon;
+  facebook.loading = "lazy";
   const instagram = document.createElement("img");
   instagram.src = instagramIcon;
+  instagram.loading = "lazy";
   const twitter = document.createElement("img");
   twitter.src = twitterIcon;
+  twitter.loading = "lazy";
   const youtube = document.createElement("img");
   youtube.src = youtubeIcon;
+  youtube.loading = "lazy";
 
   const contactUsHeader = document.createElement("h2");
   contactUsHeader.textContent = "Contact Us";

@@ -17,9 +17,11 @@ const loadAboutPage = () => {
   const img1 = document.createElement("img");
   img1.src = mhajeb;
   img1.className = "mhajeb";
+  img1.loading = "lazy";
   const img2 = document.createElement("img");
   img2.src = tajin;
   img2.className = "tajin";
+  img2.loading = "lazy";
   const h1 = document.createElement("h1");
   const p1 = document.createElement("p");
   const p2 = document.createElement("p");

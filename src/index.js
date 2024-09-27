@@ -1,10 +1,10 @@
-import "./styles/index.css";
-import { loadHomePage } from "./modules/loadHomePage";
-import { loadMenuPage } from "./modules/loadMenuPage";
-import { loadAboutPage } from "./modules/loadAboutPage";
-import { loadContactPage } from "./modules/loadContactPage";
+import "./styles/index.css"; // Keep the static CSS import
 
-loadContactPage();
+// Initially load the contact page
+import("./modules/loadContactPage").then((module) => {
+  const loadContactPage = module.default;
+  loadContactPage();
+});
 
 const homeButton = document.getElementById("home");
 const menuButton = document.getElementById("menu");
@@ -12,16 +12,29 @@ const aboutButton = document.getElementById("about");
 const contactButton = document.getElementById("contact");
 
 homeButton.addEventListener("click", () => {
-  loadHomePage();
+  import("./modules/loadHomePage").then((module) => {
+    const loadHomePage = module.default;
+    loadHomePage();
+  });
 });
+
 menuButton.addEventListener("click", () => {
-  loadMenuPage();
+  import("./modules/loadMenuPage").then((module) => {
+    const loadMenuPage = module.default;
+    loadMenuPage();
+  });
 });
 
 aboutButton.addEventListener("click", () => {
-  loadAboutPage();
+  import("./modules/loadAboutPage").then((module) => {
+    const loadAboutPage = module.default;
+    loadAboutPage();
+  });
 });
 
 contactButton.addEventListener("click", () => {
-  loadContactPage();
+  import("./modules/loadContactPage").then((module) => {
+    const loadContactPage = module.default;
+    loadContactPage();
+  });
 });

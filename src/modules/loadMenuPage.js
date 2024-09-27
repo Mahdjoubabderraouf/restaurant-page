@@ -42,6 +42,7 @@ const createMenuItem = (item) => {
   const img = document.createElement("img");
   img.src = item.img;
   img.alt = item.name;
+  img.loading = "lazy";
   const container = document.createElement("div");
   const h2 = document.createElement("h3");
 
