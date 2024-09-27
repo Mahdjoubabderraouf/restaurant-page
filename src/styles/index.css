@@ -45,12 +45,15 @@ nav {
     flex: 1;
   }
 }
-
+nav>h3{
+  flex:1;
+  text-align:center;
+}
 .buttons {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex: 1;
+  flex: none;
   button {
     border: none;
     background-color: initial;
