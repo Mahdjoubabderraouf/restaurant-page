@@ -5,7 +5,7 @@
   align-items: center;
   position: relative;
   min-height: 88vh;
-  background-image: url("../assets/matlou3.png");
+  background-image: url(d1c34aeabb173964d719.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -35,3 +35,4 @@
     z-index: 2;
   }
 }
+
